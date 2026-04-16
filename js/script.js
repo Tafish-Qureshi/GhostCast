@@ -1,9 +1,14 @@
-async function getStreams() {
-    try {
-        const response = await fetch("http://localhost:3000/api/streams");
-    } catch (err) {
-        console.error("Error fetching streams:", err);
-    }
-}
+const loginBtn = document.getElementById('login-btn');
 
-getStreams();
+loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    window.location.href = "./html/login.html";
+});
+
+const registerLink = document.getElementById('register-btn');
+
+registerLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = "./html/register.html";
+});
